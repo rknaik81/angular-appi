@@ -83,7 +83,7 @@ jobs:
                     elif [ "${CIRCLE_BRANCH}" == "staging" ]; then
                         aws --region us-west-2 s3 sync dist s3://project-qa/ --delete
                     elif [ "${CIRCLE_BRANCH}" == "master" ]; then
-                        aws --region us-west-2 s3 sync dist s3://project/ --delete
+                        aws --region global s3 sync dist s3://project/ --delete					
                     fi	
 workflows:
     version: 2
